@@ -6,7 +6,7 @@ const UserItem: React.FC = () => {
     <div className="flex items-center justify-center gap-2 rounded-[8px] border p-2">
       <div
         className="avatar flex min-h-10 min-w-10 items-center justify-center rounded-full
-       bg-emerald-500 font-[700] text-white"
+       bg-emerald-500 font-[500] text-white"
       >
         <p>UN</p>
       </div>
