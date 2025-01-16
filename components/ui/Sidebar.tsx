@@ -97,7 +97,7 @@ const Sidebar = () => {
             {menuList.map((menu: MenuGroup, menuIndex: number) => (
               <React.Fragment key={menuIndex}>
                 <CommandGroup heading={menu.group}>
-                  {menu.items.map((item, itemIndex) => (
+                  {menu.items.map((item: MenuItem, itemIndex: number) => (
                     <Link href={item.link} key={itemIndex}>
                       <CommandItem className="cursor-pointer">
                         {item.icon}
