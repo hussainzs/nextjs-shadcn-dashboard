@@ -19,6 +19,7 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
+import Link from "next/link";
 
 const Sidebar = () => {
   // type for menu items
@@ -90,17 +91,19 @@ const Sidebar = () => {
       </div>
       <div className="grow">
         <Command>
-          <CommandInput placeholder="Type a command or search..." />
+          <CommandInput placeholder="Type a command to search..." />
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
             {menuList.map((menu: MenuGroup, menuIndex: number) => (
               <React.Fragment key={menuIndex}>
                 <CommandGroup heading={menu.group}>
                   {menu.items.map((item, itemIndex) => (
-                    <CommandItem key={itemIndex}>
-                      {item.icon}
-                      {item.text}
-                    </CommandItem>
+                    <Link href={item.link} key={itemIndex}>
+                      <CommandItem className="cursor-pointer">
+                        {item.icon}
+                        {item.text}
+                      </CommandItem>
+                    </Link>
                   ))}
                 </CommandGroup>
                 {menuIndex < menuList.length - 1 && <CommandSeparator />}
