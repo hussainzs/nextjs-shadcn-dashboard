@@ -24,7 +24,7 @@ export function CommandDemo() {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <Command className="rounded-lg border shadow-md md:min-w-[450px]">
+    <Command className="rounded-lg border md:min-w-[450px]">
       <CommandInput placeholder="Type a command or search..." />
       {open && (
         <CommandList>
