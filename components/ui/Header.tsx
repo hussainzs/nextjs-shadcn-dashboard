@@ -1,7 +1,11 @@
 "use client";
 
+import { CommandDemo } from "@/components/ui/CommandDemo";
+
 export default function Header() {
   return (
-    <div className="flex items-center justify-between border-b p-4">Header</div>
+    <div className="flex gap-4 border-b p-4">
+      <CommandDemo />
+    </div>
   );
 }
