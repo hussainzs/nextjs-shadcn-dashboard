@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+// eslint-disable-next-line camelcase
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import Sidebar from "@/components/ui/Sidebar";
+import Header from "@/components/ui/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +32,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} flex items-start justify-between antialiased`}
       >
         <Sidebar />
-        <main className="size-full">{children}</main>
+        <main className="size-full">
+          <Header />
+          {children}
+        </main>
       </body>
     </html>
   );
